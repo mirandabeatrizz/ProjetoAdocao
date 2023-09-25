@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projetoadocao.entities.Interessados;
-import com.projetoadocao.entities.repositories.InteressadosRepository;
+import com.projetoadocao.repositories.InteressadosRepository;
+
 
 
 @RestController
@@ -33,7 +34,7 @@ public class InteressadosController {
 
     @GetMapping("/listar")
     public List<Interessados> listarInteressados(){
-        return interessadosRepository.findAll
+        return interessadosRepository.findAll();
     }
 
     @GetMapping("/buscar/{id}")
