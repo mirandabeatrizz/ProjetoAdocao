@@ -31,11 +31,12 @@ public class AdminController {
         return adminRepository.save(admin);
     }
 
-    /*@PutMapping("/editar/{id}")
+    @PutMapping("/editar/{id}")
     public Administradores editarAdmin(@PathVariable Long id, @RequestBody Administradores novoAdmin){
         return adminRepository.findById(id).map(admin -> {
             admin.setLogin(novoAdmin.getLogin());
             admin.setSenha(novoAdmin.getSenha());
+            return adminRepository.save(admin);
             
            
         })
@@ -43,7 +44,7 @@ public class AdminController {
             novoAdmin.setId(id);
             return adminRepository.save(novoAdmin);
         });
-    }*/
+    }
 
     @GetMapping("/listar")
     public List<Administradores> listarAdmin(){

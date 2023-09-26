@@ -31,16 +31,16 @@ public class Interessados {
     private String nome;
 
     @Column(nullable = false, length = 100)
-    private int cpf;
+    private String cpf;
 
     @Column(nullable = false, length = 100)
     private String email;
     
     @Column(nullable = false, length = 100)
-    private int telefone;
+    private String telefone;
     
     @Column(nullable = false, length = 100)
-    private int cep;
+    private String cep;
     
     @Column(nullable = false, length = 100)
     private String mensagem;

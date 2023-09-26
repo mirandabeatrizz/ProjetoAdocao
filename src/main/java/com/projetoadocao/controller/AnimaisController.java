@@ -18,7 +18,7 @@ import com.projetoadocao.repositories.AnimaisRepository;
 import jakarta.persistence.EntityNotFoundException;
 
 @RestController
-@RequestMapping("/adm/animais")
+@RequestMapping("/animais")
 public class AnimaisController {
     @Autowired
     private AnimaisRepository animaisRepository;
@@ -39,6 +39,7 @@ public class AnimaisController {
             animais.setTipo(novoAnimal.getTipo());
             animais.setPorte(novoAnimal.getPorte());
             animais.setIdade(novoAnimal.getIdade());
+            animais.setFoto(novoAnimal.getFoto());
             animais.setCastrado(novoAnimal.getCastrado());
             animais.setVacinado(novoAnimal.getVacinado());
             return animaisRepository.save(animais);
