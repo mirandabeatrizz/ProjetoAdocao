@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +32,24 @@ public class AnimaisController {
     @PostMapping("/adicionar")
     public Animais adicionarAnimais(@RequestBody Animais animais){
         return animaisRepository.save(animais);
+    }
+
+    /*teste
+    @PostMapping("/CadastroAnimais")
+    public String teste() {
+        return "CadastroAnimais";
+    }
+
+    public String showRegistrationForm(Model model) {
+        Animais animais = new Animais();
+        model.addAttribute("user", animais);
+        return "CadastroAnimais";
+    }*/
+
+   
+    @GetMapping("/teste")
+    public String teste() {
+    return "teste";
     }
 
     @PutMapping("/editar/{id}")
