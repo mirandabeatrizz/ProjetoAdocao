@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.projetoadocao.entities.Administradores;
 import com.projetoadocao.repositories.AdminRepository;
 
-@RestController
+//@RestController
+@Controller
 @RequestMapping("/adm/users")
 public class AdminController {
 
@@ -25,7 +27,10 @@ public class AdminController {
     private AdminController(AdminRepository adminRepository){
         this.adminRepository = adminRepository;
     }
-
+    @GetMapping("/teste")
+    public String teste(){
+        return "CadastroAnimais";
+    }
     @PostMapping("/adicionar")
     public Administradores adicionarAdm(@RequestBody Administradores admin){
         return adminRepository.save(admin);

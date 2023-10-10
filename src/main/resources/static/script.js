@@ -15,7 +15,7 @@ document.getElementById('addAnimais').addEventListener('click', function(){
     const castrado = castradorInput.value;
     const vacinado = vacinadoInput.value;
 
-    fetch('/adm/animais/adicionar', {
+    fetch('/animais/adicionar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
