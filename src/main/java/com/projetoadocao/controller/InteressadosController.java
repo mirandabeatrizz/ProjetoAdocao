@@ -18,7 +18,7 @@ import com.projetoadocao.repositories.InteressadosRepository;
 
 
 @RestController
-@RequestMapping("/interessados")
+@RequestMapping("/interesse")
 public class InteressadosController {
     @Autowired
     private InteressadosRepository interessadosRepository;

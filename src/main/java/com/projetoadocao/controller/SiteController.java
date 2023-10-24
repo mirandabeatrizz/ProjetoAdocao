@@ -7,8 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class SiteController {
 
     @GetMapping("")
-    public String adicionarteste(){
+    public String adicionarAnimais(){
         return "CadastroAnimais";
+    }
+    @GetMapping("/interesse")
+    public String adicionarinteresse(){
+        return "FormInteressados";
     }
     
 }
